@@ -35,7 +35,7 @@ function lineBlock(number){
     }
 
     lineBlockResult.letterContent = lineText[lineNum % 19];
-    lineBlockResult.letterY = smallBlockY;
+    lineBlockResult.letterY = smallBlockY+unit;
 
     return lineBlockResult;
 

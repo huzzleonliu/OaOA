@@ -23,8 +23,8 @@ function showValue(lastStep){
     ];
 
     for(i = 0; i< this.finalBlock.length; i ++){
-        for(k = 0; k < this.finalBlock[i].length; k++){
-            this.finalBlock[i][k].showValue = OnceAndOnceAgain[i % 19][k % 8];
+        for(k = 0; k < this.finalBlock[i].lineBlock.length; k++){
+            this.finalBlock[i].lineBlock[k].showValue = OnceAndOnceAgain[i % 19][k % 8];
         }
     }
 

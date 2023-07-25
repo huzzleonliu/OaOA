@@ -12,7 +12,7 @@ function execute(){
 
     finalBlock = showValue(fristBlock);//给方块配置ASCII代码
 
-    // console.log(finalBlock);
+    console.log(finalBlock);
     // console.log(finalBlock[0].lineBlock[0]);
 
 
@@ -22,7 +22,7 @@ function execute(){
         for( i = 0; i < finalBlock.length; i++){
             textSize(unit);
             textFont(fontRegular);//配置字体
-            // fill(255);
+            fill(255);
             text(finalBlock[i].letterContent, width - unit - unit, finalBlock[i].letterY);
 
             for(k = 0; k < finalBlock[i].lineBlock.length; k++){
