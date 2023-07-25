@@ -1,5 +1,5 @@
 function execute(){
-    
+    var fontRegular = loadFont('./ast/joystix monospace.otf');
 
     unit = width / 3 / 19;//单位长度
     blockSize = [];//每一块随机长度
@@ -12,29 +12,26 @@ function execute(){
 
     finalBlock = showValue(fristBlock);//给方块配置ASCII代码
 
-
+    // console.log(finalBlock);
+    // console.log(finalBlock[0].lineBlock[0]);
 
 
     draw = function(){
         background(0);
 
-
         for( i = 0; i < finalBlock.length; i++){
-            for(k = 0; k < finalBlock[i].length; k++){
-                finalBlock[i][k].show();
-                finalBlock[i][k].move();
+            textSize(unit);
+            textFont(fontRegular);//配置字体
+            // fill(255);
+            text(finalBlock[i].letterContent, width - unit - unit, finalBlock[i].letterY);
+
+            for(k = 0; k < finalBlock[i].lineBlock.length; k++){
+                // console.log("1");
+
+                finalBlock[i].lineBlock[k].show();
+                finalBlock[i].lineBlock[k].move();
             }
         }
-
-
-        // }
-        // r = 10;
-        // g = 255;
-        // b = 30;
-        // rc.rectangle(50, 50, 300, 300,{
-        //     fill : "rgb(" + r + "," + g + "," + b + ")"
-        // });
- 
 
     }
 }

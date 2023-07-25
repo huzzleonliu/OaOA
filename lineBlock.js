@@ -1,5 +1,9 @@
 function lineBlock(number){
-    var lineBlockResult = [];
+    var lineBlockResult = {
+        lineBlock:[],
+        letterContent:[],
+        letterY:0,
+    };
     var smallBlock;//单个方块
     var smallBlockX = 0;//方块的X坐标
     var smallBlockY;//方块的Y坐标
@@ -7,7 +11,7 @@ function lineBlock(number){
     var smallBlockWidth;//方块长度
     var lineNum = number;//lineNum count from 0
     var blockSpeed = random(0,5);//方块速度
-    var fontRegular = loadFont('./ast/joystix monospace.otf');
+
     var lineText = "once and once again";
 
     for(i = 0; smallBlockX < width ; i++){
@@ -15,11 +19,7 @@ function lineBlock(number){
         smallBlockHeight = unit;
         smallBlockWidth = blockSize[lineNum % 19][i % 8] * unit;
 
-        // textSize(unit);
-        // textFont(fontRegular);//配置字体
-        // fill(255);
-        // text(lineText[i], width - 20 - unit, smallBlockY);
-        // console.log(lineText[i]);
+
 
         smallBlock = new Block(
             smallBlockX,
@@ -29,10 +29,13 @@ function lineBlock(number){
             blockSpeed,
         );
 
-        lineBlockResult.push(smallBlock);
+        lineBlockResult.lineBlock.push(smallBlock);
 
         smallBlockX = smallBlockX + smallBlockWidth;
     }
+
+    lineBlockResult.letterContent = lineText[lineNum % 19];
+    lineBlockResult.letterY = smallBlockY;
 
     return lineBlockResult;
 

@@ -1,6 +1,6 @@
 function rowBlock(){
     var rowBlockResult = [];
-    var blockLine = [];
+    var blockLine;
     rowTotal = height / unit;
 
     for(j = 0; j < rowTotal; j++){
