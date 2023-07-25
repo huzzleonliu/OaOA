@@ -1,6 +1,7 @@
 function execute(){
-    unit = width / 3 / 19;//单位长度
+    
 
+    unit = width / 3 / 19;//单位长度
     blockSize = [];//每一块随机长度
     for( var i = 0; i < 19; i++){
         blockSize.push(numberGen());
@@ -12,8 +13,11 @@ function execute(){
     finalBlock = showValue(fristBlock);//给方块配置ASCII代码
 
 
+
+
     draw = function(){
         background(0);
+
 
         for( i = 0; i < finalBlock.length; i++){
             for(k = 0; k < finalBlock[i].length; k++){
@@ -21,6 +25,8 @@ function execute(){
                 finalBlock[i][k].move();
             }
         }
+
+
         // }
         // r = 10;
         // g = 255;
