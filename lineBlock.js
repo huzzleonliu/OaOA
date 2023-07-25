@@ -10,7 +10,7 @@ function lineBlock(number){
     var smallBlockHeight;//方块高度
     var smallBlockWidth;//方块长度
     var lineNum = number;//lineNum count from 0
-    var blockSpeed = random(0,5);//方块速度
+    var blockSpeed = $fx.rand() * 5;//方块速度
 
     var lineText = "once and once again";
 
