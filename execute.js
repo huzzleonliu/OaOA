@@ -1,7 +1,7 @@
 function execute(){
     var fontRegular = loadFont('./ast/joystix monospace.otf');
 
-    unit = width / 3 / 19;//单位长度
+    unit = width / floor(1 + $fx.rand() * 2) / 19;//单位长度
     blockSize = [];//每一块随机长度
     for( var i = 0; i < 19; i++){
         blockSize.push(numberGen());
