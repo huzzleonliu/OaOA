@@ -27,7 +27,7 @@ class Block{
                 this.bWidth, 
                 this.bHeight, 
                 {
-                    fill: 'red',
+                    fill: 'blue',
                     fillStyle: 'zigzag',
                  }
             );
